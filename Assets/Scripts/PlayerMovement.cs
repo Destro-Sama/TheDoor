@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        transform.position = new Vector3(-2.72f, 2.11f, -0.54f);
+        //transform.position = new Vector3(-2.72f, 2.11f, -0.54f);
     }
 
     void Update()
@@ -74,5 +74,13 @@ public class PlayerMovement : MonoBehaviour
     public void ChangeDirection()
     {
         inverseMultiplier = inverseMultiplier == 1 ? -1 : 1;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "DontTouch")
+        {
+            GoToCheckpoint();
+        }
     }
 }

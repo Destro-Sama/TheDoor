@@ -17,7 +17,25 @@ public class DoorTalk : MonoBehaviour
         doorTalks.Add("Beware, Once You Enter, There Is No Going Back!");
 
         positions.Add(new Vector3(113.15f, -0.21f, -1.04f));
-        doorTalks.Add("So.. You Made It Through The Obstacles.. But You Can't Get Passed This!");
+        doorTalks.Add("So.. You Made It Through The Obstacles.. But You Can't Get Through This Maze!");
+
+        positions.Add(new Vector3(191.29f, -0.21f, -1.04f));
+        doorTalks.Add("I See.. You Are Quite Cunning. But You Wont Be Able To Get Passed This!");
+
+        positions.Add(new Vector3(264.1f, -0.21f, -1.04f));
+        doorTalks.Add("Well... Smarter Than I Had Thought. There Is No Turning Back Now! Take This!!");
+
+        positions.Add(new Vector3(352.1f, -0.21f, -1.04f));
+        doorTalks.Add("Well, Well, Well.. I See You're Getting Used To Not Going Back!, But I've Got You Now!");
+
+        positions.Add(new Vector3(404.1f, -0.21f, -1.04f));
+        doorTalks.Add("How Did You Like That!! All Those Lasers And Fire!");
+
+        positions.Add(new Vector3(410f, -0.21f, -1.04f));
+        doorTalks.Add("What Do You Mean There Was Nothing There!!.. Ugh, Fine! Just Don't Touch The Walls...");
+
+        positions.Add(new Vector3(608.7f, -0.21f, -1.04f));
+        doorTalks.Add("How Careful Of You... One Final Challenge!!! Everything Together!");
 
         theDoor.transform.position = positions[0];
     }

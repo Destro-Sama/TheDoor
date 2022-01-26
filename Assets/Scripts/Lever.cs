@@ -18,7 +18,7 @@ public class Lever : MonoBehaviour
         leverRenderer = gameObject.GetComponent<Renderer>();
     }
 
-    public void PressSwitch()
+    private void PressSwitch()
     {
         on = on == true ? false : true;
         if (on == true)

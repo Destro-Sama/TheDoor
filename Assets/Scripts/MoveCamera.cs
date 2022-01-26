@@ -25,6 +25,24 @@ public class MoveCamera : MonoBehaviour
         positions.Add(new Vector3(0, 3.3f, -7.4f));
         rotations.Add(new Vector3(20.8f, 0, 0));
 
+        positions.Add(new Vector3(0.5f, 17.92f, -4.94f));
+        rotations.Add(new Vector3(65.47f, 0, 0));
+
+        positions.Add(new Vector3(0, 3.3f, -7.4f));
+        rotations.Add(new Vector3(20.8f, 0, 0));
+
+        positions.Add(new Vector3(-9.39f, 4.35f, -0.63f));
+        rotations.Add(new Vector3(14.47f, 75.1f, 0));
+
+        positions.Add(new Vector3(0, 3.3f, -7.4f));
+        rotations.Add(new Vector3(20.8f, 0, 0));
+
+        positions.Add(new Vector3(8.75f, 23.86f, -0.63f));
+        rotations.Add(new Vector3(90f, 0, 0));
+
+        positions.Add(new Vector3(0, 3.3f, -7.4f));
+        rotations.Add(new Vector3(20.8f, 0, 0));
+
         Camera.transform.localPosition = positions[0];
         Camera.transform.eulerAngles = rotations[0];
     }
