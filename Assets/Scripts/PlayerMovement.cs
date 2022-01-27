@@ -12,31 +12,39 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
 
-    public GameObject turnBackCanvas;
+    public TurnBackController turnBackCanvas;
 
     private Transform checkpoint;
-    private int resets = 0;
+    public int resets = 0;
+    public int turnBackAttempts;
 
     private bool paused;
+    private bool turningBack;
 
     public int inverseMultiplier = 1;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        //transform.position = new Vector3(-2.72f, 2.11f, -0.54f);
+        transform.position = new Vector3(-2.72f, 2.11f, -0.54f);
     }
 
     void Update()
     {
         if (characterController.isGrounded)
         {
-            if (Input.GetAxisRaw("Horizontal") < 0)
+            if (Input.GetAxisRaw("Horizontal") < 0 && turningBack == false)
             {
-                turnBackCanvas.SetActive(true);
+                turningBack = true;
+                turnBackCanvas.Activate();
                 return;
             }
-            turnBackCanvas.SetActive(false);
+            if (Input.GetAxisRaw("Horizontal") >= 0 && turningBack == true)
+            {
+                turningBack = false;
+                turnBackCanvas.DeActivate();
+                turnBackAttempts += 1;
+            }
             moveDirection = new Vector3((Mathf.Abs(Input.GetAxis("Horizontal"))*inverseMultiplier), 0.0f, Input.GetAxis("Vertical"));
             moveDirection *= speed;
 
@@ -46,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (paused == false)
+        if (paused == false && turningBack == false)
         {
             moveDirection.y -= gravity * Time.deltaTime;
             Physics.SyncTransforms();

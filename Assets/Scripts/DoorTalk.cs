@@ -37,6 +37,9 @@ public class DoorTalk : MonoBehaviour
         positions.Add(new Vector3(608.7f, -0.21f, -1.04f));
         doorTalks.Add("How Careful Of You... One Final Challenge!!! Everything Together!");
 
+        positions.Add(new Vector3(752.1f, -0.21f, -1.04f));
+        doorTalks.Add("Congrats Kiddo, You Made It Through The Trials Of THE DOOR, I Think It's Time We Stop Pretending And Go Downstairs For Some Dinner?");
+
         theDoor.transform.position = positions[0];
     }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731703, g: 0.13414727, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1991,7 +1991,9 @@ MonoBehaviour:
   speed: 6
   jumpSpeed: 8
   gravity: 20
-  turnBackCanvas: {fileID: 1102283043}
+  turnBackCanvas: {fileID: 1102283048}
+  resets: 0
+  turnBackAttempts: 0
   inverseMultiplier: 1
 --- !u!143 &399505247
 CharacterController:
@@ -2479,8 +2481,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479787401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 301.7866, y: -0.354, z: -0.1909}
-  m_LocalScale: {x: 631.1877, y: 0.292, z: 10.878099}
+  m_LocalPosition: {x: 383.6525, y: -0.354, z: -0.1909}
+  m_LocalScale: {x: 794.93054, y: 0.292, z: 10.878099}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1863765492}
@@ -6059,7 +6061,7 @@ PrefabInstance:
     - target: {fileID: 6424270456704860672, guid: 214b673e61a328f4b97a4c1f1bba63d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 608.7
+      value: 752.1
       objectReference: {fileID: 0}
     - target: {fileID: 6424270456704860672, guid: 214b673e61a328f4b97a4c1f1bba63d3,
         type: 3}
@@ -6735,13 +6737,14 @@ GameObject:
   - component: {fileID: 1102283046}
   - component: {fileID: 1102283045}
   - component: {fileID: 1102283044}
+  - component: {fileID: 1102283048}
   m_Layer: 5
   m_Name: TurnBack Canavs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1102283044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6824,6 +6827,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1102283048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102283043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96e04557114b03498f6ebd79e4efb47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joke: {fileID: 1410397845}
+  punchLine: {fileID: 577499834}
 --- !u!1 &1112883270
 GameObject:
   m_ObjectHideFlags: 0
@@ -10923,7 +10940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1847236500
 RectTransform:
   m_ObjectHideFlags: 0
