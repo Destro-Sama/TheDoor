@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DoorTalk : MonoBehaviour
 {
     public PlayerMovement playerMovement;
     public GameObject theDoor;
+
+    public GameObject doorCanvas;
+    public TMP_Text doorText;
+    public TMP_Text doorPunchLine;
 
     private List<string> doorTalks = new List<string>();
     private List<Vector3> positions = new List<Vector3>();
@@ -40,13 +45,18 @@ public class DoorTalk : MonoBehaviour
         positions.Add(new Vector3(752.1f, -0.21f, -1.04f));
         doorTalks.Add("Congrats Kiddo, You Made It Through The Trials Of THE DOOR, I Think It's Time We Stop Pretending And Go Downstairs For Some Dinner?");
 
+        positions.Add(new Vector3(1000f, -0.21f, -1.04f));
+        doorTalks.Add("");
+
         theDoor.transform.position = positions[0];
     }
 
     private void OnTriggerEnter(Collider other)
     {
         playerMovement.SetPause();
-        Debug.Log(doorTalks[positionIndex]);
+        doorCanvas.SetActive(true);
+        doorText.text = doorTalks[positionIndex];
+        doorPunchLine.text = "";
         StartCoroutine(EndPause());
         StartCoroutine(MoveDoor());
     }
@@ -54,6 +64,7 @@ public class DoorTalk : MonoBehaviour
     private IEnumerator EndPause()
     {
         yield return new WaitForSecondsRealtime(3f);
+        doorCanvas.SetActive(false);
         playerMovement.SetPause();
     }
 

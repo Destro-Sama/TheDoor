@@ -16,8 +16,26 @@ public class TurnBackController : MonoBehaviour
         jokes.Add("Why Did The Chicken Cross The Road?");
         punchLines.Add("Because He Couldn't Go Back");
 
-        jokes.Add("Test");
-        punchLines.Add("Because Test");
+        jokes.Add("knock knock, knot, knot who");
+        punchLines.Add("knot going back");
+
+        jokes.Add("what do you call a fish with no eyes?");
+        punchLines.Add("don't know, cant go back");
+
+        jokes.Add("what do you call a can opener that doesn't work?");
+        punchLines.Add("A can't go back opener!");
+
+        jokes.Add("did you hear about the italian chef who died?");
+        punchLines.Add("he didn't go back");
+
+        jokes.Add("what's fuzzy and bad for your health?");
+        punchLines.Add("going back!");
+
+        jokes.Add("two guys walk into a bar!");
+        punchLines.Add("the third guy goes back");
+
+        jokes.Add("i used to be addicted to the hokey pokey");
+        punchLines.Add("but then i didn't turn around");
     }
 
     public void Activate()
@@ -39,7 +57,6 @@ public class TurnBackController : MonoBehaviour
 
     private IEnumerator MakeJoke()
     {
-        yield return new WaitForSeconds(1f);
         joke.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         punchLine.gameObject.SetActive(true);

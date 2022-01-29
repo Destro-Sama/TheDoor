@@ -60,6 +60,11 @@ public class PlayerMovement : MonoBehaviour
             Physics.SyncTransforms();
             characterController.Move(moveDirection * Time.deltaTime);
         }
+        
+        if (paused)
+        {
+            characterController.Move(Vector3.zero);
+        }
     }
 
     public void SetCheckpoint(Transform cords)
