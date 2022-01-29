@@ -11,6 +11,15 @@ public class EndGame : MonoBehaviour
 
     public PlayerMovement player;
 
+    private void Start()
+    {
+        endCanvas = GameObject.Find("EndGame");
+        resets = endCanvas.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TMP_Text>();
+        turnBacks = endCanvas.transform.GetChild(0).GetChild(1).gameObject.GetComponent<TMP_Text>();
+
+        player = GameObject.Find("Player").GetComponent<PlayerMovement>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Time.timeScale = 0;

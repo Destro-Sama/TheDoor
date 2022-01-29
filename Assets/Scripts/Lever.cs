@@ -16,6 +16,7 @@ public class Lever : MonoBehaviour
     private void Start()
     {
         leverRenderer = gameObject.GetComponent<Renderer>();
+        player = GameObject.Find("Player");
     }
 
     private void PressSwitch()

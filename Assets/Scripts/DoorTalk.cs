@@ -18,6 +18,13 @@ public class DoorTalk : MonoBehaviour
 
     private void Start()
     {
+        playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        theDoor = GameObject.Find("TheDoor");
+
+        doorCanvas = GameObject.Find("TurnBack Canavs").transform.GetChild(0).gameObject;
+        doorText = doorCanvas.transform.GetChild(3).gameObject.GetComponent<TMP_Text>();
+        doorPunchLine = doorCanvas.transform.GetChild(4).gameObject.GetComponent<TMP_Text>();
+
         positions.Add(new Vector3(27.67f, -0.21f, -1.04f));
         doorTalks.Add("Beware, Once You Enter, There Is No Going Back!");
 

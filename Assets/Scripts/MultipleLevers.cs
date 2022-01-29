@@ -23,6 +23,7 @@ public class MultipleLevers : MonoBehaviour
     {
         leverRenderer = gameObject.GetComponent<Renderer>();
         leverAmount = levers.Length;
+        player = GameObject.Find("Player");
     }
 
     private void PressSwitch()

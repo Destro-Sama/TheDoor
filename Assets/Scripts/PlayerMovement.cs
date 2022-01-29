@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     public int inverseMultiplier = 1;
 
+    public GameObject scene;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -77,6 +79,9 @@ public class PlayerMovement : MonoBehaviour
         resets += 1;
         transform.position = checkpoint.position;
         inverseMultiplier = 1;
+        Destroy(GameObject.Find("Objects"));
+        Destroy(GameObject.Find("Objects(Clone)"));
+        Instantiate(scene);
     }
 
     public void SetPause()
